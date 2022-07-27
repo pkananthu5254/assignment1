@@ -1,0 +1,19 @@
+
+<div class="progressbar">
+    <span class="status" [style.animation-delay.s]="-progress"></span>
+    {{ progressPercentage }}% Complete
+  </div>
+  
+
+
+
+<span style="font-size:30px;cursor:pointer" (click)="isOpenMenu=!isOpenMenu">&#9776; open</span>
+
+<div id="mySidenav" class="sidenav" [ngStyle]="{width:!isOpenMenu?'250px':'0px'}">
+    <a href="javascript:void(0)" class="closebtn" (click)="isOpenMenu=!isOpenMenu">&times;</a>
+    <a routerLink="home" (click)="isOpenMenu=!isOpenMenu">Home</a>
+    <a routerLink="about" (click)="isOpenMenu=!isOpenMenu">About</a>
+    <a routerLink="sevices" (click)="isOpenMenu=!isOpenMenu">Services</a>
+    <a routerLink="contact" (click)="isOpenMenu=!isOpenMenu" >Contact</a>
+</div>
+
